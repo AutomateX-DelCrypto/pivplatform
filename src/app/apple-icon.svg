@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E17"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="url(#bgGrad)"/>
+  <!-- Hexagon -->
+  <polygon
+    points="90,20 155,52.5 155,117.5 90,150 25,117.5 25,52.5"
+    fill="none"
+    stroke="#00F0FF"
+    stroke-width="4"
+    filter="url(#glow)"
+  />
+  <!-- P letter -->
+  <text
+    x="90"
+    y="105"
+    font-family="system-ui, sans-serif"
+    font-size="70"
+    font-weight="700"
+    fill="#00F0FF"
+    text-anchor="middle"
+    filter="url(#glow)"
+  >P</text>
+</svg>
